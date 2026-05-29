@@ -15,8 +15,7 @@ EMAIL_REGEX = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
 # Strict Phone Regex: Requires at least one formatting character (+, -, space, ()) 
 # to avoid grabbing pure integer tracking IDs like Facebook Pixels
 # Highly tolerant regex: Ignores extra spaces injected by HTML spans while maintaining strict digit counts
-PHONE_REGEX = r'(?<!\d)(?:(?:\(?\+?91\)?[\s\-]*)?(?:\(?0\)?[\s\-]*)?[6-9](?:[\s\-]*\d){9}|(?:\(?\+?91\)?[\s\-]*|\(?0\)?[\s\-]*)[1-8](?:[\s\-]*\d){9}|1800(?:[\s\-]*\d){6,7})(?!\d)'class CrawlRequest(BaseModel):
-    url: str
+PHONE_REGEX = r'(?:\+\d{1,3}[\s\-]*)?\(?(?:[6-9]\d{9}|\b\d{5}[\s\-]+\d{5}\b|\b\d{3}[\s\-]+\d{3}[\s\-]+\d{4}\b)\)?'   
     max_pages: int = 10  
     delay: float = 1.0
 
