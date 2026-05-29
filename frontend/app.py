@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Backend Configuration (Update this URL after deploying the FastAPI backend)
-BACKEND_URL = "http://localhost:8000/api/crawl"
+BACKEND_URL = "https://website-contact-information-extractor.onrender.com/api/crawl"
 
 st.set_page_config(page_title="Web Contact Extractor", page_icon="🔍", layout="wide")
 
